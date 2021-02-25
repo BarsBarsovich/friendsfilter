@@ -1,0 +1,8 @@
+'FRIENDS_FILTER' = {
+    myFriends: {
+        items: []
+    },
+    bestFriends: {
+        items: []
+    }
+}

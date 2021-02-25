@@ -1,0 +1,28 @@
+.all_friends, .best_friends {
+    width: 50%;
+}
+
+.friends_list-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.friend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.friend__container{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+.friends__logo{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 11px;
+}

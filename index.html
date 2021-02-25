@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+<div class="container">
+    <h1 id="headerInfo"></h1>
+    <div class="friends_list-container">
+        <div class="all_friends">
+            <p>Ваши друзья</p>
+            <label for="friendsSearch">
+                <input type="text" id="friendsSearch">
+            </label>
+            <div id="results"></div>
+        </div>
+        <div class="best_friends">
+            <p>Друзья в списке</p>
+            <label for="bestFriendsSearch">
+                <input type="text" id="bestFriendsSearch">
+            </label>
+
+            <div id="bestFriendsList"></div>
+        </div>
+    </div>
+
+</div>
+<script id="user-template" type="text/x-handlebars-template">
+    <div class="friends">
+        {{#each items}}
+
+            <div class="friend">
+                <div class="friend__container">
+                    <img src="{{photo_100}}" class="friends__logo"/>
+                    <span>{{first_name}} {{last_name}}</span>
+                </div>
+                <div class="friends__button">
+                    <button type="submit"  class="addToBestFriend" onclick="addToBestFriend(event)">
+                        >
+                    </button>
+                </div>
+                <input type="hidden" value={{id}} id="friendId">
+            </div>
+        {{/each}}
+    </div>
+</script>
+
+<script src="src/index.js"></script>
+</body>
+
+</html>
